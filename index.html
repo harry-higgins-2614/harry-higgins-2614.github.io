@@ -16,9 +16,11 @@
     <script src="script.js"></script>
 </head>
 <body ng-app="movieApp">
+    
     <div ng-controller="movieController" class="container">
+        <div ng-include="'nav.html'"></div>
     <div class="text-center header-container">
-        <h1>Higgins Home Cinema</h1>
+        <h1>HKWH Cinema @ Home</h1>
     </div>
     <div class="row">
         <div ng-if="displayGoBack" class="goback">

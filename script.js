@@ -89,3 +89,30 @@ app.controller('movieController', function ($scope, $window) {
     }
 
 });
+
+app.controller('foodController', function($scope, $window) {
+    $scope.foods = [
+        {
+            "Title": "Hot Diggety Dog",
+            "Icon": "🌭",
+            "Options": ["Onions", "Tomato Sauce", "Mustard"],
+            "Count": 0
+        },
+        {
+            "Title": "Bacon Roll",
+            "Icon": "🥪",
+            "Options": ["Butter", "Tomato Sauce"],
+            "Count": 0
+        },
+        {
+            "Title": "Fries",
+            "Icon": "🍟",
+            "Count": 0
+        }
+    ];
+
+    $scope.incrementItem = function(food, value) {
+        $scope.foods.filter(x => x == food)[0].Count += value;
+    }
+    
+});
