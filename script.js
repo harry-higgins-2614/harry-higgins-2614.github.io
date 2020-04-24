@@ -22,7 +22,7 @@ app.controller('movieController', function ($scope, $window) {
         },
         {
             "Title": "Onward",
-            "Image": "https://lh3.googleusercontent.com/proxy/GIYXN6vX-z-ehS4JdAlx1WtoYwM1atvwa_9gDN58Gmb1DkeipJjaHQm9lTfsDA1xj2JzF5vSqtJPuybHSRhwNQigra3yIXOxiQVq2Q",
+            "Image": "https://lumiere-a.akamaihd.net/v1/images/p_onward_19024_dbb512d5.jpeg",
             "Plot": "Two elven brothers embark on a quest to bring their father back for one day."
         },
         {
