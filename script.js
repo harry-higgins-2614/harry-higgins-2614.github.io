@@ -32,6 +32,22 @@ app.controller('movieController', function ($scope, $window) {
         }
     ];
     $scope.movieCache = $scope.movies;
+
+    $scope.screenTimes = function() {    
+        var minutes = moment().format("mm");
+
+        if (minutes <= 28) {
+            var screentimeMinute = 30
+
+            var screenTime = `${moment().format("hh")} : ${screentimeMinute}`;
+
+        } else {
+            var screenTime = `${parseInt(moment().format("hh")) + 12 + 1}:00`;
+        }
+        return screenTime;
+    }
+
+
     $scope.click = function (movie) {
         movie.selected = true;
         $scope.displayGoBack = true;
@@ -49,8 +65,8 @@ app.controller('movieController', function ($scope, $window) {
 
     $scope.buyTickets = function (movie) {
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'Do you want to buy tickets for ' + movie.Title + '?',
+            title: 'Confirm selection',
+            text: 'Do you want to buy tickets for the ' + $scope.screenTimes() + ' showing of ' + movie.Title + '?',
             icon: 'question',
             confirmButtonText: 'Yes!',
             showCancelButton: true,
@@ -60,12 +76,11 @@ app.controller('movieController', function ($scope, $window) {
             if (result.value == true) {
                 Swal.fire(
                     'Success!',
-                    'Please collect your tickets from the booth',
+                    'Please collect your tickets from the ticket booth. (Kitchen Gate)',
                     'success'
                 ).then((result) => {
                     console.log(result);
                     if (result.value == true) {
-                        console.log("helloe");
                         $window.location.reload();
                     }
                 })

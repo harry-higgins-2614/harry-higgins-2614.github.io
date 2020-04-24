@@ -6,14 +6,23 @@ body {
 .header-container {
     margin-top: 5vh;
     color: hsl(333deg, 100%, 52%);
-    font-weight: 800; 
+    font-weight: 1200; 
     margin-bottom: 5vh;
+}
+.goback {
+    color: hsl(175deg, 100%, 50%);
 }
 .movie-row {
     margin-bottom: 10vh;
 }
 .movie-title {
-    color: hsl(53deg, 100%, 50%);
+    color: rgb(255, 255, 255);
     text-transform: capitalize;
-    font-weight: 200;
+    font-weight: 400;
+}
+.screentimes {
+    margin: 5vh;
+    font-weight: 700;
+    font-size: 22px;
+    color: hsl(53deg, 100%, 50%);
 }
