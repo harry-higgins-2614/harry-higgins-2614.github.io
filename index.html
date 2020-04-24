@@ -24,11 +24,11 @@
         <h2 ng-click="goBack()">Go Back</h2>
     </div>
     <div class="row movie-row text-center">
-        <div ng-repeat="movie in movies" class="col-4">
+        <div ng-repeat="movie in movies" class="col-md-4 col-xs-12">
             <img src="{{movie.Image}}" class="img img-fluid" style="height: 50vh;" ng-click="click(movie)">
             <h2 class="movie-title">{{movie.Title}}</h2>
         </div>
-        <div class="col-8" ng-if="movies.length == 1">
+        <div class="col-md-8 col-xs-12" ng-if="movies.length == 1">
             <h1>{{movies[0].Title}}</h1>
             <p>{{movies[0].Plot}}</p>
 
